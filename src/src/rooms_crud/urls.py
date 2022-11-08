@@ -3,6 +3,7 @@ from django.urls import path
 from . import rooms
 from . import users
 from . import events
+from . import attendances
 
 urlpatterns = [
     path('get_rooms', 
@@ -52,6 +53,22 @@ urlpatterns = [
     path('delete_event', 
         events.delete_event, 
         name='delete_event'
+    ),
+    path('get_attendances', 
+        attendances.get_attendances, 
+        name='get_attendances'
+    ),
+    path('post_attendance', 
+        attendances.post_attendance, 
+        name='post_attendance'
+    ),
+    path('patch_attendance', 
+        attendances.patch_attendance, 
+        name='patch_attendance'
+    ),
+    path('delete_attendance', 
+        attendances.delete_attendance, 
+        name='delete_attendance'
     ),
 
 
